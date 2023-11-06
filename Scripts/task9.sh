@@ -2,8 +2,16 @@
 
 cd ~
 
+cd test-repository/Scripts
+
+cp task8.sh $HOME/cronjob.sh
+
+cd ~
+
 cd Desktop
 
-mkdir images
+mkdir Images
 
-crontab -l | { echo "*/2 * * * * /home/ahmadawab/test-repository/scripts/task8.sh -p ~/Desktop/images -o `date +\%d-\%m_\%H:\%M` -r 1300x720";} | crontab -
+chmod +x cronjob.sh
+
+crontab -l | { echo "*/1 * * * * home/ahmadawab/cronjob.sh -p home/ahmadawab/Desktop/Images -o jpg -r 1300x720";} | crontab -
