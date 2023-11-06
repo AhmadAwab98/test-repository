@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+time=$(date +"%T")
+
 for (( i=1; i<=$#; i++)); do
 	if [ ${!i} = -p ]; then
 		j=$((i+1))
@@ -27,7 +29,7 @@ elif [ $1 = -h ]; then
   echo  "-o to save image with specific name."
   echo  "-r to set custom resoltion for image."
 else
-	directory="$dir/$name.jpg"
+	directory="$dir/$time.$name"
 	site="https://source.unsplash.com/$res/"
 	wget -q -O "$directory" $site
 fi
