@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
-# Saving the file and folder from attributes
+# saving the file and folder from attributes
 file="$1"
 folder="$2"
 
-#Function to search file
+# function to search file
 function search_file {
 	# Saving the file and folder from attributes
 	local file=$1

@@ -4,7 +4,7 @@
 msg="$*"
 
 # counting the number of characters for the box
-len=$(( ${#msg} + 4))
+len=$(( ${# msg} + 4))
 
 # displaying first line of characters
 for i in $(seq 1 $len); do printf '*'; done
