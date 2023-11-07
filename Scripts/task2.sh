@@ -17,9 +17,10 @@ echo "copying files"
 cp file1.txt task2_temp
 cp file2.txt task2_temp
 cp file3.txt task2_temp
+
+# moving task2_temp to parent folder of task2
 cd ~
 cd test-repository/scripts
-#mkdir task2_temp
 cd task2
 mv task2_temp /home/ahmadawab/test-repository/scripts
 

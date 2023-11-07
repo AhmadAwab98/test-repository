@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# copying the task to home folder 
 cd ~
 
 cd test-repository/Scripts
@@ -10,8 +11,12 @@ cd ~
 
 cd Desktop
 
+# making the directory to download image
 mkdir Images
+
+cd ~
 
 chmod +x cronjob.sh
 
-crontab -l | { echo "*/1 * * * * home/ahmadawab/cronjob.sh -p home/ahmadawab/Desktop/Images -o jpg -r 1300x720";} | crontab -
+# starting the cronjob
+crontab -l | { echo "*/1 * * * * home/ahmadawab/cronjob.sh -p home/ahmadawab/Desktop/Images -o image_ -r 1300x720";} | crontab -
