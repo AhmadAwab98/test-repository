@@ -33,7 +33,7 @@ chmod +x script.sh
 ./task1.sh file.txt folder
 ```
 
-- To execute task 2, 3 and Task 8
+- To execute task 2, 3 & Task 8
 ```
 ./task.sh
 ```
@@ -57,7 +57,6 @@ source .dotfile
 ```
 ./task7 -p path -o filename -r resolution 
 ```
-
 ```
 ./task7 -p path 
 ```
