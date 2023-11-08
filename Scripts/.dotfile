@@ -1,0 +1,2 @@
+# modifying PS1(Primary Prompt String) to include current time and working directory
+PS1="[\t] \w  > "
