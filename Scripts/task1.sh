@@ -6,15 +6,15 @@ folder="$2"
 
 # function to search file
 function search_file {
-	# Saving the file and folder from attributes
+	# saving the file and folder from attributes
 	local file=$1
 	local folder=$2
-	# Looping through the directory
+	# looping through the directory
 	for entry in "$folder"/*; do
-		# If directory then call the function again
+		# if directory then call the function again
 		if [ -d $entry ]; then
 			search_file "$file" "$entry"
-		# If file then search if file is the one we were looking for
+		# if file then search if file is the one we were looking for
 		elif [ -f $entry ] && [ "$(basename "$entry")" = "$file" ]; then 
 			echo $entry
 		fi

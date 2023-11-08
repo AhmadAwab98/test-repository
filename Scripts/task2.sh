@@ -8,7 +8,7 @@ cd task2
 
 echo "creating files"
 
-# creating 4 files in task2 folder
+# creating files in task2 folder
 touch file1.txt
 touch file2.txt
 touch file3.txt
@@ -16,12 +16,12 @@ touch file4.txt
 
 echo "creating folder task2_temp"
 
-# making 2nd folder task2_temp in task2 folder
+# making folder task2_temp in task2 folder
 mkdir -p task2_temp
 
 echo "copying files"
 
-# copying 3 files in task2 into task2_temp
+# copying files in task2 into task2_temp
 cp file1.txt task2_temp
 cp file2.txt task2_temp
 cp file3.txt task2_temp
