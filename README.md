@@ -4,14 +4,14 @@ Test Repository for the bash scripting tasks assigned.
 
 ## Description
 
-The project contains 8 distinct tasks. 
+The project contains 8 distinct tasks:
 - task 1 focuses on searching for a specific file within a designated folder
-- task 2 is responsible for creating files in a folder, copying created files to another folder, and swapping the names of the two folders.
-- task 3 provides the local IP address.
-- task 4 modifies a .dotfile, particularly altering the PS1 prompt to customize the command-line interface.
-- tasks 5 and 6 are dedicated to creating text boxes, with Task 5 printing a given string within a box made of *, and Task 6 allowing for border customization with a specified character.
-- task 7 handles the downloading of images from a website, offering the flexibility to choose names, path and resolutions for the downloaded files.
-- task 8 initiates a cronjob for Task 7, automating scheduled image downloads.
+- task 2 is responsible for creating files in a folder, copying created files to another folder, and swapping the names of the two folders
+- task 3 provides the local IP address
+- task 4 modifies a .dotfile, particularly altering the PS1 prompt to customize the command-line interface
+- tasks 5 and 6 are dedicated to creating text boxes, with Task 5 printing a given string within a box made of *, and Task 6 allowing for border customization with a specified character
+- task 7 handles the downloading of images from a website, offering the flexibility to choose names, path and resolutions for the downloaded files
+- task 8 initiates a cronjob for Task 7, automating scheduled image downloads
 
 
 ## Getting Started
@@ -23,7 +23,7 @@ Shell
 
 ### Execution
 
-- Before actually executing any task you have to change the mode of that script to execution:
+Before actually executing any task you have to change the mode of that script to execution:
 ```
 chmod +x script.sh
 ```
