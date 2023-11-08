@@ -5,13 +5,13 @@ Test Repository for the bash scripting tasks assigned.
 ## Description
 
 The project contains 8 distinct tasks. 
-- Task 1 focuses on searching for a specific file within a designated folder
-- Task 2 is responsible for creating files in one folder, copying them to another folder, and swapping the names of the two folders.
-- Task 3 provides the local IP address.
-- Task 4 modifies a .dotfile, particularly altering the PS1 prompt to customize the command-line interface.
-- Tasks 5 and 6 are dedicated to creating text boxes, with Task 5 printing a given string within a box made of *, and Task 6 allowing for border customization with a specified character.
-- Task 7 handles the downloading of images from a website, offering the flexibility to choose names, path and resolutions for the downloaded files.
-- Task 8 initiates a cronjob for Task 7, automating scheduled image downloads.
+- task 1 focuses on searching for a specific file within a designated folder
+- task 2 is responsible for creating files in a folder, copying created files to another folder, and swapping the names of the two folders.
+- task 3 provides the local IP address.
+- task 4 modifies a .dotfile, particularly altering the PS1 prompt to customize the command-line interface.
+- tasks 5 and 6 are dedicated to creating text boxes, with Task 5 printing a given string within a box made of *, and Task 6 allowing for border customization with a specified character.
+- task 7 handles the downloading of images from a website, offering the flexibility to choose names, path and resolutions for the downloaded files.
+- task 8 initiates a cronjob for Task 7, automating scheduled image downloads.
 
 
 ## Getting Started
@@ -33,7 +33,7 @@ chmod +x script.sh
 ./task1.sh file.txt folder
 ```
 
-- Task 2, 8 and Task 3 is a simple task. To run this you only have to right the name with leading ./
+- To execute task 2, 3 and Task 8
 ```
 ./task.sh
 ```
@@ -58,7 +58,6 @@ source .dotfile
 ./task7 -p path -o filename -r resolution 
 ```
 
-- In task 7 you can give only name or path or resolution in the following way:
 ```
 ./task7 -p path 
 ```
