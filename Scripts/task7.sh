@@ -1,54 +1,60 @@
 #!/usr/bin/bash
 
-# saving time for time stamping
-time=$(date +"%T")
+# get timestamp
+timestamp=$(date +"%T")
 
-# initializing dir, name, and res
-dir=$PWD
-name='_'
-res="1300x720"
+# initialize variables
+output_folder=$PWD
+file_name='_'
+resolution="1300x720"
 
-# looping over arguments
+# parsing command line arguments
 for (( i=1; i<=$# ; i++)); do
 	if [ ${!i} = -p ]; then
-	# saving the path in dir variable
+	# set the output directory
 		j=$((i+1))
-		dir=${!j}
+		output_folder=${!j}
+		
 	elif [ ${!i} = -t ]; then
-	# making the temporary folder and saving in dir variable
-		dir="$(mktemp -d -p "$PWD")"
+	# create a temporary folder for output
+		output_folder="$(mktemp -d -p "$PWD")"
+		
 	elif [ ${!i} = -o ]; then
-	# saving the name in name variable
+	# set the file name
 		j=$((i+1))
-		name=${!j}
+		file_name=${!j}
+		
 	elif [ ${!i} = -r ]; then
-	# saving the resolution in res variable
+	# set the resolution
 		j=$((i+1))
-		res=${!j}
+		resolution=${!j}
+		
 	fi
 done
 if [ $1 = -? ]; then
-	# displaying usage
+	# display usage information
 	echo "Usage: ./task8.sh [ -p PATH | -t ] [ -o FILENAME ] [ -r RESOLUTION ]"
 	echo "-p to save image on specific path."
-  echo  "-t to save image in /tmp."
-  echo  "-o to save image with specific name."
-  echo  "-r to set custom resoltion for image."
+	echo  "-t to save image in /tmp."
+	echo  "-o to save image with specific name."
+	echo  "-r to set custom resoltion for image."
+  
 elif [ $1 = -h ]; then
-	# displaying usage
+	# display usage information
 	echo "Usage: ./task8.sh [ -p PATH | -t ] [ -o FILENAME ] [ -r RESOLUTION ]"
 	echo "-p to save image on specific path."
-  echo  "-t to save image in /tmp."
-  echo  "-o to save image with specific name."
-  echo  "-r to set custom resoltion for image."
+	echo  "-t to save image in /tmp."
+	echo  "-o to save image with specific name."
+	echo  "-r to set custom resoltion for image."
+  
 else
-	# saving the path with image name
-	directory="$dir/$name$time.jpg"
-	echo $directory
+	# formulate output filepath
+	output_path="$output_folder/$file_name$time.jpg"
+	echo $output_path
 	
+	# define image URL
+	image_source="https://source.unsplash.com/$resolution/"
 	
-	# site for downloading image
-	site="https://source.unsplash.com/$res/"
-	# downloading the image
-	wget -q -O "$directory" $site
+	# download the image
+	wget -q -O "$output_path" $image_source
 fi

@@ -1,18 +1,18 @@
 #!/usr/bin/bash
 
-# saving the message in msg variable
+# store input message
 msg="$*"
 
-# counting the number of characters for the box
+# calculate the line length
 len=$(( ${# msg} + 4))
 
-# displaying first line of characters
+# print a line of asterisks
 for i in $(seq 1 $len); do printf '*'; done
 printf "\n" 
 
-# displaying message with leading and trailing *
+# print the message surrounded by asterisks
 echo "* $msg *"
 
-# displaying last line of characters
+# print another line of asterisks
 for i in $(seq 1 $len); do printf '*'; done
 printf "\n"

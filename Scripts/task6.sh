@@ -1,30 +1,35 @@
 #!/usr/bin/bash
 
-# saving message and character in the variables 
+# check flag
+# if first argument -s 
 if [ $1 = '-s' ]; then
+	# second argument is message and forth is character
 	msg=$2
 	box=$4
+# if first argument -c 
 elif [ $1 = '-c' ]; then
+	# second argument is character and forth is message
 	msg=$4
 	box=$2
 fi
 
-# if no character then display only message
+# if no character specified
 if [ -z "$box" ]; then
+	# display without character
 	echo $msg
 
 else
-	# counting the number of characters for the box
+	# calculate the line length
 	len=$(( ${# msg} + 4))
 	
-	# displaying first line of characters
+	# print a line of character
 	for i in $(seq 1 $len); do printf $box; done
 	printf "\n" 
 	
-	# displaying message with leading and trailing character
+	# print the message surrounded by character
 	echo "$box $msg $box"
 	
-	# displaying last line of characters
+	# print another line of character
 	for i in $(seq 1 $len); do printf $box; done
 	printf "\n"
 fi
